@@ -1,0 +1,192 @@
+/* Global styles for a modern, calming mental wellness interface. */
+:root {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #243042;
+  background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 20px 56px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  color: #4f46e5;
+}
+
+.hero p {
+  color: #576176;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e4ebf6;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.08);
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card-header p {
+  margin-top: 5px;
+  color: #667085;
+  font-size: 0.92rem;
+}
+
+.chat-card {
+  grid-row: span 2;
+}
+
+.chat-window {
+  height: 360px;
+  overflow-y: auto;
+  background: #f8faff;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.bubble.user {
+  margin-left: auto;
+  background: #4f46e5;
+  color: #fff;
+}
+
+.bubble.assistant {
+  background: #e8eefc;
+}
+
+.emotion-tag {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #dbe4ff;
+  color: #3d4ab8;
+  font-size: 0.75rem;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #d8e2f0;
+  border-radius: 10px;
+  padding: 10px;
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+button.primary {
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.crisis-box {
+  margin-bottom: 12px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.crisis-box ul {
+  margin: 8px 0 0;
+  padding-left: 16px;
+}
+
+.mood-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mood-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px dashed #d8e2f0;
+}
+
+.journal-history {
+  margin-top: 12px;
+  max-height: 265px;
+  overflow-y: auto;
+}
+
+.journal-entry {
+  border: 1px solid #e3eaf8;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f9fbff;
+}
+
+.journal-entry p {
+  margin: 0 0 6px;
+}
+
+.journal-entry small {
+  color: #556078;
+}
+
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-card {
+    grid-row: span 1;
+  }
+}
